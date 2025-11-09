@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@200..1000&family=Nunito:wght@200..1000&family=Pacifico&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+.nunito {
+    font-family: "Nunito", sans-serif;
+    font-weight: 400, 800;
+    font-style: normal;
+}
+
+.heebo {
+    font-family: "Heebo", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.pacifico {
+    font-family: "Pacifico", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+::-webkit-scrollbar {
+    /* width: 1rem; */
+    min-width: 30px;
+    background: #0F172B;
+}
+
+::-webkit-scrollbar-thumb {
+    min-width: 30px;
+    background: #fea116;
+}
+
+html {
+    scrollbar-color: #fea116 #0F172B;
+}
+
+body {
+    scrollbar-width: 30px;
+}
+
+.container {
+    max-width: 1350px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.products-box {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.cart td {
+    max-width: max-content;
+    padding: 10px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.anim-spin {
+    position: relative;
+    animation: spin 15s infinite linear;
+}
+
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    display: none !important;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .container {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
