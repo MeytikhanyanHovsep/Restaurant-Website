@@ -36,7 +36,7 @@ export const fetchProducts = createAsyncThunk(
         }
         try {
             const response = await fetch(
-                `https://restaurantapi-production-a6ca.up.railway.app/products/cart?ids=${wishlist}`
+                `https://restaurantapinest.vercel.app/products/cart?ids=${wishlist}`
             );
             const data = await response.json();
 

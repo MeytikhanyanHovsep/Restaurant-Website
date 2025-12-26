@@ -12,8 +12,11 @@ const initialState: ProductsState = {
 export const fetchProductsCategory = createAsyncThunk<Product[], string>(
     "products/fetchProductsCategory",
     async (category: string): Promise<Product[]> => {
+        console.log(
+            `https://restaurantapinest.vercel.app/products?category=${category}`
+        );
         const response = await fetch(
-            `https://restaurantapi-production-a6ca.up.railway.app/products?category=${category}`
+            `https://restaurantapinest.vercel.app/products?category=${category}`
         );
         const data = await response.json();
         return data;
@@ -24,7 +27,7 @@ export const fetchBestProducts = createAsyncThunk(
     "products/fetchBestProducts",
     async () => {
         const response = await fetch(
-            `https://restaurantapi-production-a6ca.up.railway.app/products/bests`
+            `https://restaurantapinest.vercel.app/products/bests`
         );
         const data = await response.json();
         return data;
@@ -35,7 +38,7 @@ export const fetchProduct = createAsyncThunk(
     "products/fetchProduct",
     async (id: number) => {
         const response = await fetch(
-            `https://restaurantapi-production-a6ca.up.railway.app/products/${id}`
+            `https://restaurantapinest.vercel.app/products/${id}`
         );
         const data = await response.json();
         return data;
@@ -47,7 +50,7 @@ export const fetchSearchProducts = createAsyncThunk(
 
     async (value: string) => {
         const response = await fetch(
-            `https://restaurantapi-production-a6ca.up.railway.app/products/search?text=${value}`
+            `https://restaurantapinest.vercel.app/products/search?text=${value}`
         );
         const data = await response.json();
 
